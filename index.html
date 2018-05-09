@@ -1,1 +1,640 @@
-test
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mykyta Nikitenko – CV</title>
+        <link rel="icon" href="/images/Ferris.svg" />
+        <!-- Tailwind CSS via CDN -->
+        <link rel="icon" href="/images/Ferris.svg" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Nyan Cat element (initially hidden) -->
+        <div id="nyancat" class="hidden fixed bottom-0 left-0 w-32">
+            <img src="images/nyancat.gif" alt="Nyan Cat" class="animate-run" />
+        </div>
+        <style>
+            /* iosevka-latin-500-normal */
+            @font-face {
+                font-family: "Iosevka";
+                font-style: normal;
+                font-display: optional;
+                font-weight: 500;
+                src:
+                    url(https://cdn.jsdelivr.net/fontsource/fonts/iosevka@latest/latin-500-normal.woff2)
+                        format("woff2"),
+                    url(https://cdn.jsdelivr.net/fontsource/fonts/iosevka@latest/latin-500-normal.woff)
+                        format("woff"),
+                    url(https://cdn.jsdelivr.net/fontsource/fonts/iosevka@latest/latin-500-normal.ttf)
+                        format("truetype");
+            }
+
+            /* Keyframes for left-to-right animation */
+            @keyframes run {
+                0% {
+                    transform: translateX(-100vw);
+                }
+                100% {
+                    transform: translateX(100vw);
+                }
+            }
+            .animate-run {
+                animation: run 8s linear 1;
+            }
+        </style>
+    </head>
+    <body
+        class="bg-[#2e3440] text-[#d8dee9] m-0"
+        style="font-family: &quot;Iosevka&quot;, monospace"
+    >
+        <!-- Outer container stretches full width -->
+        <div
+            class="w-full p-5 bg-[#3b4252] rounded-lg shadow-[0_0_15px_rgba(0,0,0,0.5)]"
+        >
+            <!-- Header (shared padding with columns) -->
+            <header
+                class="flex items-center border-b border-[#4c566a] pb-3 mb-5"
+            >
+                <!-- Left icons -->
+                <div class="flex items-center space-x-3">
+                    <img
+                        src="images/Tux.svg"
+                        class="w-12 h-12 object-contain"
+                    />
+                    <img
+                        src="images/Rust.svg"
+                        class="w-12 h-12 object-contain"
+                    />
+                    <img src="images/Go.svg" class="w-12 h-12 object-contain" />
+                    <img
+                        src="images/Python.svg"
+                        class="w-12 h-12 object-contain"
+                    />
+                </div>
+                <!-- Title centered with pronunciation on the next line -->
+                <div class="flex-grow text-center">
+                    <h1 class="mt-1 text-2xl text-[#88c0d0]">
+                        Mykyta Nikitenko<br />
+                        <span class="text-sm font-normal"
+                            >(pronounced /mɪˈkiːtə nɪkɪˈtɛnkoʊ/)</span
+                        >
+                    </h1>
+                    <h2 class="my-1 text-lg text-[#81a1c1]">
+                        Full-Stack Software Engineer
+                    </h2>
+                    <p class="text-sm">Pronouns: He/His</p>
+                </div>
+                <!-- Right icon -->
+                <div>
+                    <img src="images/Pride.svg" class="w-12 h-12 rounded" />
+                </div>
+            </header>
+
+            <!-- Content container: grid on small/tablet; flex on large screens -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex lg:space-x-5">
+                <!-- Left Column: Collapsed mode order-3, Desktop order-1 -->
+                <div
+                    class="order-3 mb-5 lg:mb-0 lg:flex-[2] lg:order-1 lg:border-r lg:border-[#4c566a] pr-5"
+                >
+                    <section class="text-sm mb-5">
+                        <h3
+                            class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]"
+                        >
+                            About Me
+                        </h3>
+                        <p class="mb-2">
+                            I’m an easy-going and open-minded person who enjoys
+                            building things that are practical and efficient.
+                            Outside of engineering, I have six cats and a dog,
+                            read a lot about science and technology, and sing in
+                            the
+                            <a
+                                href="https://krakofonia.org/"
+                                target="_blank"
+                                class="text-[#88c0d0] hover:underline"
+                            >
+                                amateur LGBTQ+ choir Krakofonia </a
+                            >, where I also arrange music and play piano.
+                        </p>
+                        <p>
+                            I appreciate direct, honest communication and
+                            working with teams that respect and support each
+                            other. I do my best to be thoughtful, fair, and
+                            mindful of different perspectives, especially when
+                            solving problems together.
+                        </p>
+                    </section>
+                    <section class="text-sm mb-5">
+                        <h3
+                            class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]"
+                        >
+                            Professional Interests
+                        </h3>
+                        <p class="mb-2">
+                            I've worked with Go for backend development since
+                            2016 and have spent the last few years diving deep
+                            into Rust, focusing on performance, safety, and
+                            system-level programming. Now, I’m looking for a
+                            role where Rust is the main language, and I can
+                            apply it to real-world problems at scale.
+                        </p>
+                        <p>
+                            I'm into distributed systems, cloud infrastructure,
+                            and machine learning, especially when it involves
+                            high-performance computing and large-scale data. I
+                            like working with people who are straightforward and
+                            treat each other with respect. I try to be fair,
+                            keep an open mind, and make sure everyone’s input is
+                            heard.
+                        </p>
+                    </section>
+                    <section class="text-sm mb-5">
+                        <h3
+                            class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]"
+                        >
+                            Languages
+                        </h3>
+                        <ul class="list-disc pl-5">
+                            <li>English (C1)</li>
+                            <li>Polish (C1)</li>
+                            <li>Ukrainian (Native)</li>
+                            <li>Russian (Native)</li>
+                        </ul>
+                    </section>
+                    <section class="text-sm mb-5">
+                        <h3
+                            class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]"
+                        >
+                            Contact
+                        </h3>
+                        <ul class="list-disc pl-5">
+                            <li>📍 Kraków, Poland</li>
+                            <li>🌐 Open to remote work (GMT+1 to PST-8)</li>
+                            <li>📞 Whatsup: +48 663 590 162</li>
+                            <li>
+                                ✉️ Email:
+                                <a
+                                    href="mailto:nikitanikitenko@gmail.com"
+                                    class="text-[#88c0d0] hover:underline"
+                                >
+                                    nikitanikitenko@gmail.com
+                                </a>
+                            </li>
+                            <li>
+                                🔗
+                                <a
+                                    href="https://www.linkedin.com/in/mykyta-nikitenko/"
+                                    class="text-[#88c0d0] hover:underline"
+                                >
+                                    LinkedIn
+                                </a>
+                            </li>
+                            <li>
+                                🐙
+                                <a
+                                    href="https://github.com/mykytanikitenko"
+                                    class="text-[#88c0d0] hover:underline"
+                                >
+                                    GitHub
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- Right Column: Collapsed mode order-2, Desktop order-3 -->
+                <div
+                    class="order-2 mb-5 lg:mb-0 lg:flex-[3] lg:order-3 lg:border-l lg:border-[#4c566a]"
+                >
+                    <section class="text-sm">
+                        <h3
+                            class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]"
+                        >
+                            Skills
+                        </h3>
+                        <ul class="list-none p-0">
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>🦀 Rust:</strong> 5+ years in backend,
+                                ML, and high-performance systems. cargo, borrow
+                                checker: ownership, borrowing and lifetimes,
+                                immutability. Standard library, smart pointers
+                                (Box, Rc, Arc, Weak), interior mutability (Cell,
+                                RefCell), Copy on Write (Cow) and Zero Copy,
+                                traits, typesafe design, macroses, async futures
+                                mechanism, async-await. Runtimes: tokio,
+                                async-std, compio. Synchronisation mechanisms:
+                                channels, mutexes, atomics. Iterators and
+                                streams, allocator API, optimisations, tracing,
+                                debugging and profiling.
+                            </li>
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>🐹 Go:</strong> 8+ years: core library,
+                                idiomatic patterns, and concurrency: goroutines,
+                                channels, contexts, cancellations, mutexes,
+                                atomics, strong reflection knowledge, iterators,
+                                generics, troubleshooting and debugging skills
+                                using a profiler, tracer, racer, and other
+                                tools.
+                            </li>
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>🐍 Python:</strong> Expertise in ML
+                                libraries (scikit-learn, numpy, pandas),
+                                asyncio, and data visualization (matplotlib,
+                                seaborn).
+                            </li>
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>🗄️ Databases:</strong> PostgreSQL,
+                                Clickhouse, Scylla, Redis – relational and
+                                non-relational data modeling.
+                            </li>
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>📨 Message Queues:</strong> RabbitMQ,
+                                Kafka, SQS, SNS, Google Pub/Sub; CDC, Debezium.
+                                Designing event-driven systems.
+                            </li>
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>🐳 Containerization:</strong> Docker,
+                                Podman, Kubernetes, DevContainers, Toolbox,
+                                Distrobox, rpm-ostree.
+                            </li>
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>⚙️ Paradigms:</strong> Object-oriented,
+                                functional, concurrent; <i>idiomatic</i> Rust
+                                and Go.
+                            </li>
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>🔧 Revision Control:</strong> Git.
+                                Advanced git workflows. Branching, merging,
+                                rebasing, bisecting, cherry-pick, reflog.
+                                Submodules and worktrees.
+                            </li>
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>🧪 Methodologies:</strong> TDD, BDD,
+                                DDD, formal verification, property-based
+                                testing.
+                            </li>
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>✅ Code Quality:</strong> SOLID, KISS,
+                                DRY, YAGNI
+                            </li>
+                            <li class="bg-[#434c5e] p-2 rounded">
+                                <strong>💻 Operating Systems:</strong> GNU/Linux
+                                user since 2009
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- Middle Column: Collapsed mode order-1, Desktop order-2 -->
+                <div class="order-1 lg:order-2 mb-5 lg:mb-0 lg:flex-[5] pr-5">
+                    <section class="text-sm mb-5">
+                        <h3
+                            class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]"
+                        >
+                            Profile
+                        </h3>
+                        <p class="mb-2">
+                            <strong
+                                >9+ years of total professional
+                                experience</strong
+                            >
+                        </p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>
+                                Experienced in remote work environments with a
+                                strong command of digital collaboration tools
+                                and effective virtual communication.
+                            </li>
+                            <li>
+                                Deep understanding of both the theoretical
+                                foundations and practical applications of
+                                software architecture and design, ensuring
+                                consistency, performance, scalability, and
+                                maintainability in engineering solutions.
+                            </li>
+                            <li>
+                                Machine Learning and Data Science,
+                                recommendation algorithms, and ML models
+                                integration.
+                            </li>
+                            <li>
+                                Distributed services and microservice
+                                architecture, distributed monoliths design.
+                            </li>
+                            <li>Unit, Integration &amp; E2E Testing.</li>
+                            <li>Type-safe systems and formal verification.</li>
+                            <li>Cloud platforms.</li>
+                            <li>
+                                Databases and data modeling for relational and
+                                non-relational databases.
+                            </li>
+                            <li>
+                                Solving complex problems with a hands-on
+                                approach to troubleshooting.
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="text-sm mb-5">
+                        <h3
+                            class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]"
+                        >
+                            Education
+                        </h3>
+                        <div class="mb-4 pb-2 border-b border-[#4c566a]">
+                            <p>September 2018 - May 2019</p>
+                            <p>
+                                Courses “Artificial Intelligence and Data
+                                Science” at MasterCode IT School
+                            </p>
+                        </div>
+                        <div class="mb-4 pb-2 border-b border-[#4c566a]">
+                            <p>September 2014 - December 2017</p>
+                            <p>
+                                National Technical University – «Kharkiv
+                                Polytechnic Institute» (Ukraine) - System
+                                Engineering - 3 years
+                            </p>
+                        </div>
+                    </section>
+                    <section class="text-sm">
+                        <h3
+                            class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]"
+                        >
+                            Professional Experience
+                        </h3>
+                        <div class="mb-4 pb-2 border-b border-[#4c566a]">
+                            <div class="text-lg text-[#a3be8c]">
+                                Senior Software Engineer at daily.dev
+                                <span
+                                    class="bg-[#4c566a] text-[#d8dee9] text-xs px-2 ml-2 rounded"
+                                    >(Remote)</span
+                                >
+                            </div>
+                            <div class="text-sm text-[#81a1c1]">
+                                June 2023 - Now
+                            </div>
+                            <p class="mb-2">
+                                At daily.dev, an open-source professional
+                                network for developers, I led the development of
+                                a cutting-edge recommendation system for our
+                                core feed feature. I designed services and
+                                pipelines to handle millions of real-time
+                                recommendations daily, achieving sub-100ms
+                                latency, and optimized real-time content
+                                delivery and ranking models to drive
+                                improvements in user retention and engagement.
+                            </p>
+                            <p class="mb-2">
+                                Blog post:
+                                <a
+                                    href="https://daily.dev/blog/project-sauron-building-a-two-tower-retrieval-model-for-personalized-recommendations-at-daily-dev"
+                                    target="_blank"
+                                    class="text-[#88c0d0] hover:underline"
+                                >
+                                    Project Sauron: building a two-tower
+                                    retrieval model for personalized
+                                    recommendations at daily.dev
+                                </a>
+                            </p>
+                            <p class="text-xs text-[#bf616a]">
+                                Technologies: 🦀 Rust, 🐹 Go, 🐍 Python, ☁️ GCP
+                            </p>
+                        </div>
+                        <div class="mb-4 pb-2 border-b border-[#4c566a]">
+                            <div class="text-lg text-[#a3be8c]">
+                                Senior Software Engineer at Picnic
+                                <span
+                                    class="bg-[#4c566a] text-[#d8dee9] text-xs px-2 ml-2 rounded"
+                                    >(Remote)</span
+                                >
+                            </div>
+                            <div class="text-sm text-[#81a1c1]">
+                                February 2023 - May 2023
+                            </div>
+                            <p class="mb-2">
+                                Picnic is an app that lets users connect with
+                                communities that share their interests. By
+                                joining circles based on their interests, users
+                                can browse through feeds focused on specific
+                                topics, such as fashion, writing, and scuba
+                                diving. I have developed a collaborative
+                                filtering algorithm for recommending circles to
+                                users based on the experience of other users'
+                                behaviors on similar interests. I developed the
+                                machine learning algorithm itself and created
+                                full ML flow pipelines for data aggregation,
+                                preprocessing, training, postprocessing, and
+                                model inference.
+                            </p>
+                            <p class="text-xs text-[#bf616a]">
+                                Technologies: 🦀 Rust, 🐍 Python, ☁️ GCP, 🤖
+                                Vertex AI
+                            </p>
+                        </div>
+                        <div class="mb-4 pb-2 border-b border-[#4c566a]">
+                            <div class="text-lg text-[#a3be8c]">
+                                Senior Software Engineer at OLX (Real Estates)
+                                <span
+                                    class="bg-[#4c566a] text-[#d8dee9] text-xs px-2 ml-2 rounded"
+                                    >(Remote)</span
+                                >
+                            </div>
+                            <div class="text-sm text-[#81a1c1]">
+                                June 2020 to December 2022
+                            </div>
+                            <p class="mb-2">
+                                I worked on otodom.pl, imovirtual.pt, and
+                                storia.ro—top real estate platforms in Poland,
+                                Portugal, and Romania—where I led the migration
+                                of a sprawling PHP monolith with over 1.5
+                                million lines of code and 300+ MySQL tables into
+                                a cloud-base scalable microservices
+                                architecture. This shift drastically improved
+                                maintainability and deployment speed while I
+                                designed and rolled out new architectural
+                                solutions to enhance system scalability.
+                            </p>
+                            <p class="text-xs text-[#bf616a]">
+                                Technologies: 🦀 Rust, 🐹 Go, ☁️ AWS, 🔷
+                                TypeScript, 🐘 PHP
+                            </p>
+                        </div>
+                        <div class="mb-4 pb-2 border-b border-[#4c566a]">
+                            <div class="text-lg text-[#a3be8c]">
+                                Senior Software Engineer at Luxoft for NAUTO.com
+                                <span
+                                    class="bg-[#4c566a] text-[#d8dee9] text-xs px-2 ml-2 rounded"
+                                    >(In-Office)</span
+                                >
+                            </div>
+                            <div class="text-sm text-[#81a1c1]">
+                                May 2019 - May 2020
+                            </div>
+                            <p class="mb-2">
+                                An autonomous car startup on a mission to make
+                                cities safer and more efficient with better
+                                drivers. Merging artificial intelligence with
+                                computer vision, client's systems detect and
+                                react to what's happening on the road ahead of a
+                                driver and within the vehicle. The algorithms
+                                sense when there is an issue on the road ahead
+                                or a distraction in the car and helps the driver
+                                respond. They also automatically understand when
+                                a collision is about to happen and record the
+                                scene. I developed the driver identification
+                                part using real-time streaming technologies for
+                                data processing with deep learning models for
+                                face detection and recognition both on server
+                                and device.
+                                <br />
+                                Presentation at San Francisco ScyllaDB
+                                Conference 2019 -
+                                <a
+                                    href="https://www.youtube.com/watch?v=E94BwH94_gM"
+                                    target="_blank"
+                                    class="text-[#88c0d0] hover:underline"
+                                >
+                                    "Nauto: An Online Method for Merging Time
+                                    Ranges on ScyllaDB"
+                                </a>
+                            </p>
+                            <p class="text-xs text-[#bf616a]">
+                                Technologies: 🦀 Rust (firmware, ML inference),
+                                🐹 Go, 📡 Kafka, ☁️ AWS, 🗄️ Scylla, 🐍 Python,
+                                🤖 TensorFlow
+                            </p>
+                        </div>
+                        <div class="mb-4 pb-2 border-b border-[#4c566a]">
+                            <div class="text-lg text-[#a3be8c]">
+                                Full-Stack Software Engineer at Andersen
+                                <span
+                                    class="bg-[#4c566a] text-[#d8dee9] text-xs px-2 ml-2 rounded"
+                                    >(In-Office)</span
+                                >
+                            </div>
+                            <div class="text-sm text-[#81a1c1]">
+                                June 2018 to May 2019
+                            </div>
+                            <p class="mb-2">
+                                I developed an internal platform for a bank,
+                                leaning on object-oriented modeling to
+                                streamline business processes. I designed and
+                                built systems for storing and computing data
+                                tied to business models and objects, empowering
+                                users to craft diagrams with relationships,
+                                define and run formulas over data, and edit
+                                structured info in tables. I maintained the
+                                platform using a microservices architecture,
+                                ensuring scalability and maintainability.
+                            </p>
+                            <p class="text-xs text-[#bf616a]">
+                                Technologies: 🐹 Go, ⚙️ Angular
+                            </p>
+                        </div>
+                        <div class="mb-4 pb-2 border-b border-[#4c566a]">
+                            <div class="text-lg text-[#a3be8c]">
+                                Full Stack Software Engineer at Statsminder
+                                Startup at International Telecoms
+                                <span
+                                    class="bg-[#4c566a] text-[#d8dee9] text-xs px-2 ml-2 rounded"
+                                    >(Hybrid)</span
+                                >
+                            </div>
+                            <div class="text-sm text-[#81a1c1]">
+                                January 2017 to May 2018
+                            </div>
+                            <p class="mb-2">
+                                I built a VOIP termination and trading platform
+                                that powered scalable, cloud-based international
+                                route optimization and call management. I
+                                crafted software to pinpoint and test the
+                                cheapest international routes, gather stats, and
+                                manage resales, while also developing business
+                                panels and automatic origination tools for
+                                seamless call routing. Harnessing Go’s
+                                concurrency, I handled millions of active SIP
+                                connections and call statuses with low-latency
+                                performance and scalability.
+                            </p>
+                            <p class="text-xs text-[#bf616a]">
+                                Technologies: 🐹 Go, ⚙️ Angular, 🔄 FreeSwitch
+                            </p>
+                        </div>
+                        <div class="mb-4 pb-2 border-b border-[#4c566a]">
+                            <div class="text-lg text-[#a3be8c]">
+                                Student Internship, Full Stack Software Engineer
+                                at Multimedia Nordic
+                                <span
+                                    class="bg-[#4c566a] text-[#d8dee9] text-xs px-2 ml-2 rounded"
+                                    >(In-Office)</span
+                                >
+                            </div>
+                            <div class="text-sm text-[#81a1c1]">
+                                October 2016 to December 2016
+                            </div>
+                            <p class="mb-2">
+                                I developed a customer relationship management
+                                (CRM) system tailored for oil-extracting company
+                                and their department in Norway. I designed and
+                                built user interfaces to simplify client
+                                interactions, contract management, and business
+                                reporting, while creating tools to handle
+                                customer data, service requests, and operational
+                                workflows for better business efficiency.
+                            </p>
+                            <p class="text-xs text-[#bf616a]">
+                                Technologies: .NET, AngularJS
+                            </p>
+                        </div>
+                        <div>
+                            <div class="text-lg text-[#a3be8c]">
+                                Student Internship, Full-Stack Software Engineer
+                                at Gillie Software
+                                <span
+                                    class="bg-[#4c566a] text-[#d8dee9] text-xs px-2 ml-2 rounded"
+                                    >(In-Office)</span
+                                >
+                            </div>
+                            <div class="text-sm text-[#81a1c1]">
+                                January 2016 to September 2016
+                            </div>
+                            <p class="mb-2">
+                                I designed and built web applications that
+                                leveraged digital maps for data visualization
+                                and real-time updates, while also developing
+                                data streaming pipelines to process and analyze
+                                call center data. I also developed VoIP
+                                solutions to deliver scalable communication
+                                services integrated into the application.
+                            </p>
+                            <p class="text-xs text-[#bf616a]">
+                                Technologies: .NET, AngularJS
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        // Prevent showing on mobile devices (viewport width less than 768px)
+        if (window.innerWidth > 768) {
+            // Function to randomly show the Nyan Cat
+            function maybeShowNyanCat() {
+                const cat = document.getElementById("nyancat");
+                // 30% chance to show it
+                if (Math.random() < 0.3) {
+                    cat.classList.remove("hidden");
+                    // Hide after 10 seconds (matches animation duration)
+                    setTimeout(() => cat.classList.add("hidden"), 7000);
+                } else {
+                    cat.classList.add("hidden");
+                }
+            }
+            // Check every minute
+            setInterval(maybeShowNyanCat, 60000);
+            // Also check once on load
+            maybeShowNyanCat();
+        }
+    </script>
+</html>
