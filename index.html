@@ -50,9 +50,45 @@
         <div
             class="w-full p-5 bg-[#3b4252] rounded-lg shadow-[0_0_15px_rgba(0,0,0,0.5)]"
         >
-            <!-- Header (shared padding with columns) -->
+            <!-- Mobile Header: visible on very small screens only -->
             <header
-                class="flex items-center border-b border-[#4c566a] pb-3 mb-5"
+                class="block md:hidden border-b border-[#4c566a] pb-3 mb-5 text-center"
+            >
+                <!-- All logos in one row -->
+                <div
+                    class="flex justify-center items-center flex-wrap space-x-3 mb-3"
+                >
+                    <img
+                        src="images/Tux.svg"
+                        class="w-12 h-12 object-contain"
+                    />
+                    <img
+                        src="images/Rust.svg"
+                        class="w-12 h-12 object-contain"
+                    />
+                    <img src="images/Go.svg" class="w-12 h-12 object-contain" />
+                    <img
+                        src="images/Python.svg"
+                        class="w-12 h-12 object-contain"
+                    />
+                    <img src="images/Pride.svg" class="w-12 h-12 rounded" />
+                </div>
+                <!-- Name, pronunciation, role, pronouns -->
+                <h1 class="mt-1 text-2xl text-[#88c0d0]">
+                    Mykyta Nikitenko<br />
+                    <span class="text-sm font-normal"
+                        >(pronounced /mɪˈkiːtə nɪkɪˈtɛnkoʊ/)</span
+                    >
+                </h1>
+                <h2 class="my-1 text-lg text-[#81a1c1]">
+                    Full-Stack Software Engineer
+                </h2>
+                <p class="text-sm">Pronouns: He/His</p>
+            </header>
+
+            <!-- Desktop Header: visible on md and larger screens -->
+            <header
+                class="hidden md:flex items-center border-b border-[#4c566a] pb-3 mb-5"
             >
                 <!-- Left icons -->
                 <div class="flex items-center space-x-3">
@@ -99,71 +135,6 @@
                         <h3
                             class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]"
                         >
-                            About Me
-                        </h3>
-                        <p class="mb-2">
-                            I’m an easy-going and open-minded person who enjoys
-                            building things that are practical and efficient.
-                            Outside of engineering, I have six cats and a dog,
-                            read a lot about science and technology, and sing in
-                            the
-                            <a
-                                href="https://krakofonia.org/"
-                                target="_blank"
-                                class="text-[#88c0d0] hover:underline"
-                            >
-                                amateur LGBTQ+ choir Krakofonia </a
-                            >, where I also arrange music and play piano.
-                        </p>
-                        <p>
-                            I appreciate direct, honest communication and
-                            working with teams that respect and support each
-                            other. I do my best to be thoughtful, fair, and
-                            mindful of different perspectives, especially when
-                            solving problems together.
-                        </p>
-                    </section>
-                    <section class="text-sm mb-5">
-                        <h3
-                            class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]"
-                        >
-                            Professional Interests
-                        </h3>
-                        <p class="mb-2">
-                            I've worked with Go for backend development since
-                            2016 and have spent the last few years diving deep
-                            into Rust, focusing on performance, safety, and
-                            system-level programming. Now, I’m looking for a
-                            role where Rust is the main language, and I can
-                            apply it to real-world problems at scale.
-                        </p>
-                        <p>
-                            I'm into distributed systems, cloud infrastructure,
-                            and machine learning, especially when it involves
-                            high-performance computing and large-scale data. I
-                            like working with people who are straightforward and
-                            treat each other with respect. I try to be fair,
-                            keep an open mind, and make sure everyone’s input is
-                            heard.
-                        </p>
-                    </section>
-                    <section class="text-sm mb-5">
-                        <h3
-                            class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]"
-                        >
-                            Languages
-                        </h3>
-                        <ul class="list-disc pl-5">
-                            <li>English (C1)</li>
-                            <li>Polish (C1)</li>
-                            <li>Ukrainian (Native)</li>
-                            <li>Russian (Native)</li>
-                        </ul>
-                    </section>
-                    <section class="text-sm mb-5">
-                        <h3
-                            class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]"
-                        >
                             Contact
                         </h3>
                         <ul class="list-disc pl-5">
@@ -198,6 +169,71 @@
                                 </a>
                             </li>
                         </ul>
+                    </section>
+                    <section class="text-sm mb-5">
+                        <h3
+                            class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]"
+                        >
+                            Languages
+                        </h3>
+                        <ul class="list-disc pl-5">
+                            <li>English (C1)</li>
+                            <li>Polish (C1)</li>
+                            <li>Ukrainian (Native)</li>
+                            <li>Russian (Native)</li>
+                        </ul>
+                    </section>
+                    <section class="text-sm mb-5">
+                        <h3
+                            class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]"
+                        >
+                            About Me
+                        </h3>
+                        <p class="mb-2">
+                            I’m an easy-going and open-minded person who enjoys
+                            building things that are practical and efficient.
+                            Outside of engineering, I have six cats and a dog,
+                            read a lot about science and technology, and sing in
+                            the
+                            <a
+                                href="https://krakofonia.org/"
+                                target="_blank"
+                                class="text-[#88c0d0] hover:underline"
+                            >
+                                amateur LGBTQ+ choir Krakofonia </a
+                            >, where I also arrange music and play piano.
+                        </p>
+                        <p>
+                            I appreciate direct, honest communication and
+                            working with teams that respect and support each
+                            other. I do my best to be thoughtful, fair, and
+                            mindful of different perspectives, especially when
+                            solving problems together.
+                        </p>
+                    </section>
+                    <section class="text-sm">
+                        <h3
+                            class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]"
+                        >
+                            Professional Interests
+                        </h3>
+                        <p class="mb-2">
+                            I've worked with Go for backend development since
+                            2016 and have spent the last few years diving deep
+                            into Rust, focusing on performance, safety, and
+                            system-level programming. Now, I’m looking for a
+                            role where Rust is the main language, and I can
+                            apply it to real-world problems at scale.
+                        </p>
+                        <p>
+                            I'm into distributed systems, cloud infrastructure,
+                            and machine learning, especially when it involves
+                            high-performance computing and large-scale data. I
+                            like working with people who are straightforward and
+                            treat each other with respect. I try to be fair,
+                            keep an open mind, and make sure everyone’s input is
+                            heard.
+                        </p>
                     </section>
                 </div>
 
@@ -618,23 +654,23 @@
 
     <script>
         // Prevent showing on mobile devices (viewport width less than 768px)
-        if (window.innerWidth > 768) {
-            // Function to randomly show the Nyan Cat
-            function maybeShowNyanCat() {
-                const cat = document.getElementById("nyancat");
-                // 30% chance to show it
-                if (Math.random() < 0.3) {
-                    cat.classList.remove("hidden");
-                    // Hide after 10 seconds (matches animation duration)
-                    setTimeout(() => cat.classList.add("hidden"), 7000);
-                } else {
-                    cat.classList.add("hidden");
-                }
+        if (window.innerWidth < 768) return;
+
+        // Function to randomly show the Nyan Cat
+        function maybeShowNyanCat() {
+            const cat = document.getElementById("nyancat");
+            // 30% chance to show it
+            if (Math.random() < 0.3) {
+                cat.classList.remove("hidden");
+                // Hide after 10 seconds (matches animation duration)
+                setTimeout(() => cat.classList.add("hidden"), 7000);
+            } else {
+                cat.classList.add("hidden");
             }
-            // Check every minute
-            setInterval(maybeShowNyanCat, 60000);
-            // Also check once on load
-            maybeShowNyanCat();
         }
+        // Check every minute
+        setInterval(maybeShowNyanCat, 60000);
+        // Also check once on load
+        maybeShowNyanCat();
     </script>
 </html>
