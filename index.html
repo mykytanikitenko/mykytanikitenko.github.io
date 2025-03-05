@@ -654,7 +654,7 @@
 
     <script>
         // Prevent showing on mobile devices (viewport width less than 768px)
-        if (window.innerWidth < 768) {
+        if (window.innerWidth > 768) {
             // Function to randomly show the Nyan Cat
             function maybeShowNyanCat() {
                 const cat = document.getElementById("nyancat");
