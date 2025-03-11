@@ -58,31 +58,35 @@
             }
 
             @media print {
+                html, body {
+                    overflow: visible !important;
+                    height: auto !important;
+                }
+
+                .w-full, .lg\\:flex, .grid, .lg\\:flex-\[2\], .lg\:flex-\[3\], .lg\:flex-\[5\] {
+                    display: block !important;
+                    width: auto !important;
+                }
+
+                .lg\:border-l, .lg\:border-r {
+                    border: none !important;
+                }
+
+                .rounded, .rounded-lg {
+                    border-radius: 0 !important;
+                    box-shadow: none !important;
+                }
+
+                .p-5, .pr-5 {
+                    padding: 0.5rem !important;
+                }
+
                 body, html {
-                    height: auto;
-                    overflow: visible;
+                    font-size: 18px !important;
+                    overflow: visible !important;
+                    height: auto !important;
                 }
 
-                div {
-                    page-break-inside: avoid;
-                }
-
-                header, section {
-                    break-inside: avoid;
-                }
-
-                /* Hide unwanted elements from printing */
-                #nyancat, script {
-                    display: none !important;
-                }
-
-                /* Remove excessive margins and padding */
-                * {
-                    margin: 0 !important;
-                    padding: 0 !important;
-                }
-
-                /* Set consistent margins for PDF */
                 @page {
                     margin: 1cm;
                 }
