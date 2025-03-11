@@ -56,6 +56,37 @@
             .animate-run {
                 animation: run 8s linear 1;
             }
+
+            @media print {
+                body, html {
+                    height: auto;
+                    overflow: visible;
+                }
+
+                div {
+                    page-break-inside: avoid;
+                }
+
+                header, section {
+                    break-inside: avoid;
+                }
+
+                /* Hide unwanted elements from printing */
+                #nyancat, script {
+                    display: none !important;
+                }
+
+                /* Remove excessive margins and padding */
+                * {
+                    margin: 0 !important;
+                    padding: 0 !important;
+                }
+
+                /* Set consistent margins for PDF */
+                @page {
+                    margin: 1cm;
+                }
+            }
         </style>
     </head>
     <body
