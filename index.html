@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mykyta Nikitenko – CV</title>
+        <link rel="icon" href="images/Ferris.svg" />
+        <!-- Tailwind CSS (vendored: built from css/input.css via `just css`) -->
+        <link rel="stylesheet" href="css/tailwind.css" />
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNJBDE9Z21"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-MNJBDE9Z21");
+        </script>
+
+        <style>
+            /* iosevka-latin-400-normal */
+            @font-face {
+                font-family: "Iosevka";
+                font-style: normal;
+                font-display: swap;
+                font-weight: 400;
+                src: url(fonts/iosevka-latin-400-normal.woff2) format("woff2");
+            }
+
+            /* iosevka-latin-500-normal */
+            @font-face {
+                font-family: "Iosevka";
+                font-style: normal;
+                font-display: swap;
+                font-weight: 500;
+                src: url(fonts/iosevka-latin-500-normal.woff2) format("woff2");
+            }
+
+            /* iosevka-latin-700-normal */
+            @font-face {
+                font-family: "Iosevka";
+                font-style: normal;
+                font-display: swap;
+                font-weight: 700;
+                src: url(fonts/iosevka-latin-700-normal.woff2) format("woff2");
+            }
+
+            /* Keyframes for left-to-right animation */
+            @keyframes run {
+                0% {
+                    transform: translateX(-100vw);
+                }
+                100% {
+                    transform: translateX(100vw);
+                }
+            }
+            .animate-run {
+                animation: run 8s linear 1;
+            }
+
+            @media print {
+                /* Headless Chromium's --print-to-pdf lays out below the md (768px)
+                   breakpoint, so md:flex/md:hidden never activate. Force the
+                   desktop (golden-ratio) header on and hide the mobile header,
+                   independent of viewport width. */
+                header.block {
+                    display: none !important;
+                }
+                header.hidden {
+                    display: flex !important;
+                }
+                header {
+                    margin-bottom: 0.4rem !important;
+                }
+
+                /* Light print theme: white background, dark text (the site is dark-on-light) */
+                * {
+                    color: #1a1a1a !important;
+                    background: transparent !important;
+                    border-color: #cbd5e1 !important;
+                    box-shadow: none !important;
+                }
+
+                a {
+                    color: #1d4ed8 !important;
+                    text-decoration: underline !important;
+                }
+
+                html,
+                body {
+                    overflow: visible !important;
+                    height: auto !important;
+                    background: #ffffff !important;
+                }
+
+                .grid,
+                .lg\:flex {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    width: auto !important;
+                }
+
+                .w-full,
+                .lg\:flex-\[2\],
+                .lg\:flex-\[3\],
+                .lg\:flex-\[5\] {
+                    display: block !important;
+                    width: auto !important;
+                }
+
+                /* Let sections reorder across column wrappers in print */
+                .grid > div {
+                    display: contents !important;
+                }
+
+                #profile {
+                    order: 1 !important;
+                }
+                #open-source {
+                    order: 2 !important;
+                }
+                #projects {
+                    order: 3 !important;
+                }
+                #experience {
+                    order: 4 !important;
+                }
+                #skills {
+                    order: 5 !important;
+                }
+                #education {
+                    order: 6 !important;
+                }
+                #unpublished {
+                    order: 7 !important;
+                }
+
+                #open-source,
+                #projects {
+                    border-left: 2px solid #1a1a1a !important;
+                    padding-left: 0.75rem !important;
+                }
+                #open-source > div > div:first-child,
+                #projects > div > div:first-child {
+                    font-weight: 700 !important;
+                    font-size: 1.15em !important;
+                }
+
+                .lg\:border-l,
+                .lg\:border-r {
+                    border: none !important;
+                }
+
+                .rounded,
+                .rounded-lg {
+                    border-radius: 0 !important;
+                    box-shadow: none !important;
+                }
+
+                .p-5,
+                .pr-5 {
+                    padding: 0.7rem !important;
+                }
+
+                body,
+                html {
+                    font-size: 13px !important;
+                    overflow: visible !important;
+                    height: auto !important;
+                }
+
+                @page {
+                    margin: 0;
+                }
+
+                section {
+                    margin-bottom: 0.12rem !important;
+                }
+                section h3 {
+                    margin-bottom: 0.1rem !important;
+                    padding-bottom: 0.05rem !important;
+                }
+                #skills li {
+                    padding: 0.1rem 0.4rem !important;
+                    margin-bottom: 0.05rem !important;
+                }
+                .mb-2 {
+                    margin-bottom: 0.1rem !important;
+                }
+                #earlier p {
+                    margin-bottom: 0.15rem !important;
+                }
+                #education p {
+                    margin-bottom: 0.1rem !important;
+                }
+            }
+        </style>
+    </head>
+    <body class="bg-[#2e3440] text-[#d8dee9] m-0" style="font-family: &quot;Iosevka&quot;, monospace">
+        <!-- Nyan Cat element (initially hidden) -->
+        <div id="nyancat" class="hidden fixed bottom-0 left-0 w-32">
+            <img src="images/nyancat.gif" alt="Nyan Cat" class="animate-run" />
+        </div>
+        <!-- Outer container stretches full width -->
+        <div class="w-full p-5 bg-[#3b4252] rounded-lg shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+            <!-- Mobile Header: visible on very small screens only -->
+            <header class="block md:hidden border-b border-[#4c566a] pb-3 mb-5 text-center">
+                <!-- All logos in one row -->
+                <div class="flex justify-center items-center flex-wrap space-x-3 mb-3">
+                    <img src="images/Tux.svg" class="w-12 h-12 object-contain" alt="" />
+                    <img src="images/Rust.svg" class="w-12 h-12 object-contain" alt="" />
+                    <img src="images/Go.svg" class="w-12 h-12 object-contain" alt="" />
+                </div>
+                <!-- Name, pronunciation, role, pronouns -->
+                <h1 class="mt-1 text-2xl text-[#88c0d0]">
+                    Mykyta Nikitenko<br />
+                    <span class="text-lg font-normal">(pronounced /mɪˈkiːtə nɪkɪˈtɛnkoʊ/)</span>
+                </h1>
+                <h2 class="my-1 text-lg text-[#81a1c1]">Rust / AI Systems Engineer · Agent Infrastructure · Distributed Systems · 10+ years</h2>
+                <p class="text-lg">Pronouns: He/His</p>
+                <div class="mt-3 text-sm text-center">
+                    <p>📍 Kraków, Poland | Remote (GMT+1 to PST-8)</p>
+                    <p>
+                        ✉️
+                        <a href="mailto:nikitanikitenko@gmail.com" class="text-[#88c0d0] hover:underline"
+                            >nikitanikitenko@gmail.com</a
+                        >
+                    </p>
+                    <p>
+                        🔗
+                        <a
+                            href="https://www.linkedin.com/in/mykyta-nikitenko/"
+                            class="text-[#88c0d0] hover:underline"
+                            >LinkedIn</a
+                        >
+                        |
+                        <a href="https://github.com/mykytanikitenko" class="text-[#88c0d0] hover:underline"
+                            >GitHub</a
+                        >
+                    </p>
+                    <p class="print:hidden">
+                        📄
+                        <a
+                            href="Mykyta%20Nikitenko%20-%20Rust%20AI%20Systems%20Engineer.pdf"
+                            download
+                            class="text-[#88c0d0] hover:underline"
+                            >Download PDF</a
+                        >
+                    </p>
+                    <p>Languages: English (C1), Polish (C1), Ukrainian/Russian (Native)</p>
+                </div>
+            </header>
+
+            <!-- Desktop Header: visible on md and larger screens -->
+            <header class="hidden md:flex items-center border-b border-[#4c566a] pb-3 mb-5">
+                <!-- Left column: logo icons + name block, golden-ratio majority -->
+                <div class="flex-[1.618] flex items-center">
+                    <!-- Left icons -->
+                    <div class="flex shrink-0 items-center space-x-3">
+                        <img src="images/Tux.svg" class="w-12 h-12 object-contain" alt="" />
+                        <img src="images/Rust.svg" class="w-12 h-12 object-contain" alt="" />
+                        <img src="images/Go.svg" class="w-12 h-12 object-contain" alt="" />
+                    </div>
+                    <!-- Title centered with pronunciation on the next line -->
+                    <div class="flex-grow min-w-0 text-center">
+                        <h1 class="mt-1 text-2xl text-[#88c0d0]">
+                            Mykyta Nikitenko<br />
+                            <span class="text-lg font-normal">(pronounced /mɪˈkiːtə nɪkɪˈtɛnkoʊ/)</span>
+                        </h1>
+                        <h2 class="my-1 text-lg text-[#81a1c1]">Rust / AI Systems Engineer · Agent Infrastructure · Distributed Systems · 10+ years</h2>
+                        <p class="text-lg">Pronouns: He/His</p>
+                    </div>
+                </div>
+                <!-- Right column: contact details only, golden-ratio minority -->
+                <div class="flex-[1] text-sm text-right">
+                    <p>📍 Kraków, Poland | Remote (GMT+1 to PST-8)</p>
+                    <p>
+                        ✉️
+                        <a href="mailto:nikitanikitenko@gmail.com" class="text-[#88c0d0] hover:underline"
+                            >nikitanikitenko@gmail.com</a
+                        >
+                    </p>
+                    <p>
+                        🔗
+                        <a
+                            href="https://www.linkedin.com/in/mykyta-nikitenko/"
+                            class="text-[#88c0d0] hover:underline"
+                            >LinkedIn</a
+                        >
+                        |
+                        <a href="https://github.com/mykytanikitenko" class="text-[#88c0d0] hover:underline"
+                            >GitHub</a
+                        >
+                    </p>
+                    <p class="print:hidden">
+                        📄
+                        <a
+                            href="Mykyta%20Nikitenko%20-%20Rust%20AI%20Systems%20Engineer.pdf"
+                            download
+                            class="text-[#88c0d0] hover:underline"
+                            >Download PDF</a
+                        >
+                    </p>
+                    <p>Languages: English (C1), Polish (C1), Ukrainian/Russian (Native)</p>
+                </div>
+            </header>
+
+            <!-- Content container: grid on small/tablet; flex on large screens -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:flex lg:space-x-5">
+                <!-- Right Column: Collapsed mode order-2, Desktop order-3 -->
+                <div class="order-2 mb-5 lg:mb-0 lg:flex-[3] lg:order-3 lg:border-l lg:border-[#4c566a]">
+                    <section id="skills" class="text-lg">
+                        <h3 class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]">Skills</h3>
+                        <ul class="list-none p-0">
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>🦀 Rust:</strong> Using Rust since 2017, full-time since 2023, building cloud services, ML pipelines, and
+                                distributed systems. Memory safety: lifetimes and ownership, unsafe and FFI. Type
+                                system: traits, static and dynamic dispatch, type-safe patterns, GATs, HRTB,
+                                zero-cost abstractions. Async: runtimes (tokio, compio), hyper, axum, futures,
+                                streams and cancellation, allocator API. API design: trait-based abstractions,
+                                idiomatic error handling. Tooling: proc macros, compile-time guarantees, pedantic
+                                Clippy. Database drivers, HTTP services, optimizations and performance profiling.
+                            </li>
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>🤖 AI / Agent Infrastructure:</strong> LLM gateways (LiteLLM): routing, provider fallback, local models via Ollama. Coding-agent harnesses: parallel subagents in isolated git worktrees, context pruning and compression, persistent memory, inter-agent messaging. Production ML pipelines: recommendation and deep learning inference.
+                            </li>
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>🗄️ Distributed Systems &amp; Storage:</strong> PostgreSQL, Clickhouse, Scylla, Redis: relational and non-relational data modeling. Object storage: S3, GCS, Minio. RabbitMQ, Kafka, SQS, SNS, Google Pub/Sub; CDC, Debezium. Designing event-driven systems.
+                            </li>
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>🧪 Testing, Reliability &amp; Observability:</strong> TDD, BDD. Unit, integration and e2e tests as distinct tools: deterministic tests, and any defect reproducible by a test. Tracing and observability.
+                            </li>
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>💻 Linux &amp; Containerization:</strong> processes, threads, signals, scheduling; file descriptors, pipes, sockets, io-uring; syscalls and the syscall ABI (x86-64); namespaces. Fedora/RHEL ecosystem. Nix and NixOS: declarative system configuration, reproducible environments. Daily user since 2009. Docker, Podman, Kubernetes, DevContainers, Toolbox, Distrobox, rpm-ostree.
+                            </li>
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>Other languages:</strong> Go (Advanced), Python (Advanced), JavaScript/TypeScript (Advanced)
+                            </li>
+                            <li class="mb-2 bg-[#434c5e] p-2 rounded">
+                                <strong>⚙️ Paradigms:</strong> Object-oriented, functional, concurrent, zero-copy;
+                                <i>idiomatic</i> Rust and Go.
+                            </li>
+                            <li class="bg-[#434c5e] p-2 rounded">
+                                <strong>🔧 Revision Control:</strong> Git. Git workflows. Branching, merging,
+                                rebasing, bisecting, cherry-pick, reflog. Submodules and worktrees. Merge queues.
+                                Designing Git workflows for LLM tooling and throughput.
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- Middle Column: Collapsed mode order-1, Desktop order-2 -->
+                <div class="order-1 lg:order-2 mb-5 lg:mb-0 lg:flex-[5] pr-5">
+                    <section id="profile" class="text-lg mb-5">
+                        <h3 class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]">Profile</h3>
+                        <p class="mb-2">
+                            Systems engineer with 10+ years building distributed systems, storage, and ML pipelines in production, and now infrastructure for coding agents.
+                        </p>
+                        <p class="mb-2">
+                            I am looking for a role where Rust is the primary/target language and where I own systems. For me Rust has become a primary instrument in the era of LLM-augmented engineering, with a type system defining constraints that allow producing reliable code on production scale with faster feedback loops.
+                        </p>
+                        <p class="mb-2">
+                            I prefer to write clean simple code following best community practices and using pedantic Clippy. I always think in advance about how a system is going to behave under edge cases and how to avoid them. I design software with the ability to reproduce or debug any issue. I know how to adapt an existing codebase or create a new one based on requirements. I use my machine learning and data science knowledge to create an optimal solution under defined constraints. In my mind, I imagine systems in parts and as a whole as a mathematical deterministic system.
+                        </p>
+                        <p class="mb-2">
+                            As a hobby I play piano, sing in the Krakofonia choir with my wife, happy father of 5 cats and 2 dogs. I appreciate direct, honest communication and working with teams that respect and support each other.
+                        </p>
+                    </section>
+                    <section id="open-source" class="text-lg mb-5">
+                        <h3 class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]">Open Source</h3>
+                        <div>
+                            <div class="text-lg text-[#a3be8c]">rudzio</div>
+                            <div class="text-lg text-[#81a1c1]">async test framework for Rust</div>
+                            <p class="mb-2">
+                                <a
+                                    href="https://crates.io/crates/rudzio"
+                                    target="_blank"
+                                    class="text-[#88c0d0] hover:underline"
+                                    >crates.io</a
+                                >
+                                |
+                                <a
+                                    href="https://github.com/mykytanikitenko/rudzio"
+                                    target="_blank"
+                                    class="text-[#88c0d0] hover:underline"
+                                    >GitHub</a
+                                >
+                                |
+                                <a href="https://docs.rs/rudzio" target="_blank" class="text-[#88c0d0] hover:underline"
+                                    >docs.rs</a
+                                >
+                            </p>
+                            <p class="mb-2">
+                                I have discovered that long-running agent-driven work depends on test design, and that
+                                using <code>cargo test</code> in monolithic codebases is frustrating. Rudzio runs tests
+                                from multiple crates in a single process with non-blocking interactive terminal output
+                                and each runtime on its own thread, handling panics, SIGTERM/SIGINT, suite setup errors,
+                                timeouts, cancellation and teardown. It organises tests into Suites, which might define
+                                complex setup and teardown logic guaranteed to be called. Resource ownership is a
+                                lifetime hierarchy enforced by the compiler:
+                                <code>'runtime: 'suite_context: 'test_context</code>. This allows writing tests that,
+                                for example, create a Podman container, always perform cleanup even when a panic
+                                appears, create a connection pool, borrow a connection per test. It is possible to plug
+                                in any asynchronous runtime and Rudzio is completely runtime agnostic (currently
+                                supports tokio, compio, async-std, smol, monoio, embassy and futures-executor).
+                            </p>
+                            <p class="text-sm text-[#bf616a]">
+                                Technologies: 🦀 Rust, proc macros, cargo internals, async runtimes, threading, panic unwinding, cancellation.
+                            </p>
+                        </div>
+                    </section>
+                    <section id="projects" class="text-lg mb-5">
+                        <h3 class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]">Projects</h3>
+                        <div>
+                            <div class="text-lg text-[#a3be8c]">PorfiryPetrovichAI</div>
+                            <div class="text-lg text-[#81a1c1]">coding-agent infrastructure · my daily engineering tool · private, walkthrough on request</div>
+                            <p class="mb-2">
+                                A self-hosted agent system built since April 2026, largely by agents running on the system itself. Built on hard forks of opencode and maki (Rust), with ~380 own commits across the agent core, model router, context pruning and memory plugins, kept as commits on the vendored trees with no patch files.
+                            </p>
+                            <ul class="list-disc pl-5 mb-2">
+                                <li>Parallel subagents, each in its own git worktree and branch, with serialized merge-back and git as the source of truth for task results; an inter-agent control channel (SQLite) for steering running agents; self-hosted persistent memory per repository.</li>
+                                <li>LLM gateway (LiteLLM): provider-neutral model names, usage-based routing, and fallback chains ending in a local model (Ollama); GPU-backed context-compression service (ModernBERT).</li>
+                                <li>Infrastructure: Fedora CoreOS on Hetzner via OpenTofu and GitHub Actions, rpm-ostree image bake, Podman quadlets, Nix, observability with SigNoz and OpenTelemetry.</li>
+                            </ul>
+                            <p class="text-sm text-[#bf616a]">
+                                Technologies: TypeScript, Bun, 🦀 Rust, Lua, Julia, 🐍 Python, Nix, OpenTofu, Podman, SQLite
+                            </p>
+                        </div>
+                        <div class="mt-2">
+                            <div class="text-lg text-[#a3be8c]">Fugue</div>
+                            <p class="mb-2">Memory-safe systems programming language guaranteed by linear types, without GC or a panic system, with an optional completion-based I/O thread-per-core async runtime. Compiler prototype in progress, private.</p>
+                        </div>
+                    </section>
+                    <section id="experience" class="text-lg mb-5">
+                        <h3 class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]">Professional Experience</h3>
+                        <div class="mb-4 pb-2 border-b border-[#4c566a]">
+                            <div class="text-lg text-[#a3be8c]">
+                                Senior Rust Engineer at Fathom.io
+                                <span class="bg-[#4c566a] text-[#d8dee9] text-sm px-2 ml-2 rounded">(Remote)</span>
+                                <span class="text-sm text-[#81a1c1] ml-2">October 2025 - Now</span>
+                            </div>
+                            <p class="mb-2 text-base">Redesigned the file storage engine to support multiple swappable generic backends (GCP, S3, Minio) with stronger consistency guarantees and failover. It uses async streams to avoid materialising data in memory, and supports resumable transfers, range requests, uploads and downloads over a generic thin API. Built with a focus on observability and testability: everything can be validated by unit, integration and end-to-end tests based on requirements. It became the foundation for a new asynchronous query execution layer, which stores intermediate results in storage and reads them back as a stream through a thin asynchronous failover API.</p>
+                            <p class="text-sm text-[#bf616a]">Technologies: 🦀 Rust, ☁️ S3, ☁️ Google Cloud Storage, 🔭 OpenTelemetry</p>
+                        </div>
+                        <div class="mb-4 pb-2 border-b border-[#4c566a]">
+                            <div class="text-lg text-[#a3be8c]">
+                                Senior Software Engineer at NXLog Platform
+                                <span class="bg-[#4c566a] text-[#d8dee9] text-sm px-2 ml-2 rounded">(Remote)</span>
+                                <span class="text-sm text-[#81a1c1] ml-2">May 2025 - October 2025</span>
+                            </div>
+                            <p class="mb-2 text-base">
+                                Shipped a functional prototype of a stateless Rust service replacing a legacy Java
+                                system for managing a fleet of NXLog data-collection agents, with one binary
+                                covering on-premise, cloud and multitenant installations. I designed the
+                                multitenancy model. For constrained on-premise setup, I designed async
+                                communication over Postgres replication protocol, swappable per deployment
+                                strategy with SQS or RabbitMQ.
+                            </p>
+                            <p class="text-sm text-[#bf616a]">
+                                Technologies: 🦀 Rust, 🐘 PostgreSQL, ☸️ Kubernetes, 🐳 Docker, ☁️ GCP
+                            </p>
+                        </div>
+                        <div class="mb-4 pb-2 border-b border-[#4c566a]">
+                            <div class="text-lg text-[#a3be8c]">
+                                Senior Software Engineer at daily.dev
+                                <span class="bg-[#4c566a] text-[#d8dee9] text-sm px-2 ml-2 rounded">(Remote)</span>
+                                <span class="text-sm text-[#81a1c1] ml-2">June 2023 - May 2025</span>
+                            </div>
+                            <p class="mb-2 text-base">
+                                I designed a new machine learning pipeline for a deep learning recommendation engine serving over half a million developers at around 100 ms, with asynchronous near real-time inference. It enabled continuous learning with feedback loops, creating experiments at runtime, and adapting model hyperparameters for specific users based on their interactions with the platform. It replaced a legacy pipeline based on collecting trivial statistics, and gave full observability, A/B testing, the ability to reproduce any experiment, and full coverage of unit, integration and end-to-end tests.
+                            </p>
+                            <p class="mb-2">
+                                A/B tested against the previous pipeline: +5% upvotes, +44% bookmarked posts,
+                                +13% significant events, +11% unique posts clicked.
+                            </p>
+                            <p class="mb-2">
+                                daily.dev engineering blog:
+                                <a
+                                    href="https://daily.dev/blog/project-sauron-building-a-two-tower-retrieval-model-for-personalized-recommendations-at-daily-dev"
+                                    target="_blank"
+                                    class="text-[#88c0d0] hover:underline"
+                                >
+                                    Project Sauron: building a two-tower retrieval model for personalized
+                                    recommendations at daily.dev
+                                </a>
+                            </p>
+                            <p class="text-sm text-[#bf616a]">Technologies: 🦀 Rust, 🐹 Go, 🐍 Python, 🗄️ ClickHouse, 🗄️ Redis, ☁️ GCP</p>
+                        </div>
+                        <div class="mb-4 pb-2 border-b border-[#4c566a]">
+                            <div class="text-lg text-[#a3be8c]">
+                                Senior Software Engineer at OLX (Real Estates)
+                                <span class="bg-[#4c566a] text-[#d8dee9] text-sm px-2 ml-2 rounded">(Remote)</span>
+                                <span class="text-sm text-[#81a1c1] ml-2">June 2020 to May 2023</span>
+                            </div>
+                            <p class="mb-2 text-base">
+                                OLX Real Estate platforms (otodom.pl, imovirtual.pt and storia.ro) faced scalability and maintainability issues with a legacy 1.5 million line PHP monolith, a database of 300+ MySQL tables, and outdated infrastructure. I established engineering principles for splitting the monolith into Go microservices and migrating to AWS, following best practices for modern cloud applications with a focus on observability, testability and scalability. This allowed a complete redesign of the agent admin UI and listings management based on user engagement data, listing statistics and ML predictions for advertisement bump timing, releasing the agent UI early after internal testing with selected clients.
+                            </p>
+                            <p class="text-sm text-[#bf616a]">
+                                Technologies: 🐹 Go, ☁️ AWS
+                            </p>
+                        </div>
+                        <div class="mb-4 pb-2 border-b border-[#4c566a]">
+                            <div class="text-lg text-[#a3be8c]">
+                                Senior Software Engineer at Luxoft for NAUTO.com
+                                <span class="bg-[#4c566a] text-[#d8dee9] text-sm px-2 ml-2 rounded">(In-Office)</span>
+                                <span class="text-sm text-[#81a1c1] ml-2">May 2019 - May 2020</span>
+                            </div>
+                            <p class="mb-2 text-base">
+                                I designed and created a new incident detection (dangerous behaviour or items) and
+                                driver identification production pipeline in Go from a Jupyter Python prototype, for a continuous stream of events collected
+                                by safety cameras inside commercial fleets, which allowed new deep learning
+                                algorithms to be deployed with a focus on determinism and testability. Scoped to
+                                specific safety events instead of continuous behavioural profiling.
+                                <br />
+                                Presentation at San Francisco ScyllaDB Conference 2019 -
+                                <a
+                                    href="https://www.youtube.com/watch?v=hYntoEVPZ94"
+                                    target="_blank"
+                                    class="text-[#88c0d0] hover:underline"
+                                >
+                                    "Nauto on Consistently Merging Time Series and Finding Similar Images"
+                                </a>
+                            </p>
+                            <p class="text-sm text-[#bf616a]">
+                                Technologies: 🐹 Go, 📡 Kafka, ☁️ AWS, 🗄️ Scylla
+                            </p>
+                        </div>
+                        <div id="earlier" class="text-base">
+                            <div class="text-lg text-[#a3be8c]">Earlier</div>
+                            <p class="mb-1">
+                                <strong>Full-Stack Software Engineer, Andersen (In-Office) · June 2018 to May
+                                2019</strong><br />
+                                Built internal banking platform with microservices architecture for business process
+                                modeling and data computation. Technologies: Go, Angular
+                            </p>
+                            <p class="mb-1">
+                                <strong>Full Stack Software Engineer, Statsminder Startup at International Telecoms
+                                (Hybrid) · January 2017 to May 2018</strong><br />
+                                Built VoIP platform handling millions of concurrent SIP
+                                connections for international route optimization. Technologies: Go, Angular,
+                                FreeSwitch
+                            </p>
+                            <p class="mb-1">
+                                <strong>Student internships, Full-Stack Software Engineer, Multimedia Nordic and Gillie Software (In-Office) · January 2016 to December 2016</strong><br />
+                                CRM for an oil industry client in Norway; web apps with digital maps and real-time call center analytics. Technologies: .NET, AngularJS
+                            </p>
+                        </div>
+                    </section>
+                    <section id="education" class="text-base">
+                        <h3 class="border-b border-[#4c566a] pb-1.5 mb-2.5 text-[#ebcb8b]">Education</h3>
+                        <p class="mb-1">
+                            <strong>Machine Learning, Data Science and Deep Learning</strong><br />
+                            MasterCode IT School, 2018-19
+                        </p>
+                        <p class="mb-1">
+                            <strong>System Engineering</strong><br />
+                            Kharkiv Polytechnic Institute, Faculty of Automation and Device Engineering, 2014-17
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Prevent showing on mobile devices (viewport width less than 768px)
+            if (window.innerWidth > 768) {
+                // Function to randomly show the Nyan Cat
+                function maybeShowNyanCat() {
+                    const cat = document.getElementById("nyancat");
+                    // 30% chance to show it
+                    if (Math.random() < 0.3) {
+                        cat.classList.remove("hidden");
+                        // Hide after 10 seconds (matches animation duration)
+                        setTimeout(() => cat.classList.add("hidden"), 7000);
+                    } else {
+                        cat.classList.add("hidden");
+                    }
+                }
+                // Check every minute
+                setInterval(maybeShowNyanCat, 60000);
+                // Also check once on load
+                maybeShowNyanCat();
+            }
+        </script>
+    </body>
+</html>
